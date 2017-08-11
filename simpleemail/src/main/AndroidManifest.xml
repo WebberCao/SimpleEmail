@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.webber.simpleemail">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
     <application
+        android:name="com.webber.simpleemail.app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,6 +21,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.HomeActivity"></activity>
+        <activity android:name=".activity.MailAddConstact"></activity>
+        <activity android:name=".activity.MailBoxActivity"></activity>
+        <activity android:name=".activity.MailCaogaoxiangActivity"></activity>
+        <activity android:name=".activity.MailConstactsActivity"></activity>
+        <activity android:name=".activity.MailEditActivity"></activity>
+        <activity android:name=".activity.MailContentActivity"></activity>
+        <provider android:name="com.webber.simpleemail.provider.EmailConstantProvider"
+            android:authorities="com.emailconstantprovider"/>
+
+        <provider android:name="com.webber.simpleemail.provider.CaogaoxiangProvider"
+            android:authorities="com.caogaoxiangprovider"/>
+
+        <provider android:name="com.webber.simpleemail.provider.AttachmentProvider"
+            android:authorities="com.attachmentprovider"/>
+
+        <provider android:name="com.webber.simpleemail.provider.EmailStatusProvider"
+            android:authorities="com.emailstatusprovider"/>
     </application>
 
 </manifest>

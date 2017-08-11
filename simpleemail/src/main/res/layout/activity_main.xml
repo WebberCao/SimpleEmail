@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+   <LinearLayout 
+       android:layout_height="50dip"
+       android:layout_width="match_parent"
+       android:gravity="center"
+       android:background="#297DC6">
+       <TextView 
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:text="@string/tv_title"
+           android:textColor="#ffffff"
+           android:textSize="20sp"/>
+   </LinearLayout>
+   <ExpandableListView 
+       android:id="@+id/list"
+       android:layout_height="match_parent"
+       android:layout_width="match_parent"/>
+
+</LinearLayout>

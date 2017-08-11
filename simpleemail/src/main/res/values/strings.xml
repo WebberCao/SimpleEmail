@@ -1,3 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SimpleEmail</string>
+    <string name="app_name">Email</string>
+    <string name="action_settings">Settings</string>
+    <string name="emailaddress">邮件地址</string>
+    <string name="emailpassword">密码</string>
+    <string name="emaillogin">登入</string>
+    <string name="remenberPassword">记住密码</string>
+    <string name="autoLogin">自动登入</string>
+    <string name="tv_title">Email</string>
+    <string name="tv_online">所有组</string>
+    <string name="back">返回</string>
+    <string name="writer">新邮件</string>
+    <string name="send">发送</string>
+    <string name="tv_t">收件人:</string>
+    <string name="tv_f">发件人:</string>
+    <string name="tv_zhuti">主题:</string>
+    <string name="acctchment">附件</string>
+    <string name="content">正  文</string>
+    <string name="tv_new">新</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_relay">回复/转发</string>
+    <string name="mail_box">收件箱</string>
+    <string name="mail_content">邮件</string>
+    <string name="btn_replay">回复</string>
+    <string name="constant">联系人</string>
+    <string name="choose">确定</string>
+    <string name="caogaoxiang">草稿箱</string>
 </resources>

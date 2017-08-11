@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle">
+    <solid android:color="#CECBCE"/>
+    <!-- 圆角弧度 -->
+    <corners android:radius="5dip"/>
+    <!-- 文字距边框距离 -->
+    <padding 
+        android:left="10dip"
+        android:top="10dip"
+        android:right="10dip"
+        android:bottom="10dip"/>
+    <!-- 设置button的大小 -->
+    <size 
+        android:width="50dp"
+        android:height="50dp" />
+</shape>

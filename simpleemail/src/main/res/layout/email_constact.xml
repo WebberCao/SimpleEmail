@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#297DC6">
+        <Button 
+            android:onClick="back"
+            android:layout_height="wrap_content"
+            android:layout_width="100dip"
+            android:background="@drawable/mm_title_btn_back"
+            android:text="@string/back"
+            android:textColor="#ffffff"/>
+        <TextView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/constant"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"/>
+        </LinearLayout>
+        <ListView 
+            android:id="@+id/lv_constant"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/update" android:title="更新邮箱地址"/>
+    <item android:id="@+id/delete" android:title="删除联系人"/>
+
+</menu>
