@@ -34,6 +34,7 @@ public class EmailLoginActivity extends Activity implements TextWatcher, OnClick
 	private SharedPreferences sp;
 	private CheckBox cb_remenber;
 	private CheckBox cb_autologin;
+	private boolean isRbPwd;
 	private Handler handler=new Handler(){
 		@Override
 		public void handleMessage(Message msg) {
@@ -103,7 +104,7 @@ public class EmailLoginActivity extends Activity implements TextWatcher, OnClick
 	 * 是否记住密码
 	 */
 	private void isRemenberPwd(){
-		boolean isRbPwd=sp.getBoolean("isRbPwd", false);
+		isRbPwd=sp.getBoolean("isRbPwd", false);
 		if(isRbPwd){
 			String addr=sp.getString("address", "");
 			String pwd=sp.getString("password", "");
@@ -117,14 +118,12 @@ public class EmailLoginActivity extends Activity implements TextWatcher, OnClick
 	 * 记住密码
 	 */
 	private void remenberPwd(){
-		boolean isRbPwd=sp.getBoolean("isRbPwd", false);
+		isRbPwd=sp.getBoolean("isRbPwd", false);
 		if(isRbPwd){
 			sp.edit().putBoolean("isRbPwd", false).commit();
 			cb_remenber.setChecked(false);
 		}else{
 			sp.edit().putBoolean("isRbPwd", true).commit();
-			sp.edit().putString("address", emailAddress.getText().toString().trim()).commit();
-			sp.edit().putString("password", password.getText().toString().trim()).commit();
 			cb_remenber.setChecked(true);
 			
 		}
@@ -151,6 +150,10 @@ public class EmailLoginActivity extends Activity implements TextWatcher, OnClick
 		if(!EmailFormatUtil.emailFormat(address)){
 			Toast.makeText(EmailLoginActivity.this, "邮箱格式不正确", Toast.LENGTH_SHORT).show();
 		}else{
+			if(isRbPwd){
+				sp.edit().putString("address", emailAddress.getText().toString().trim()).commit();
+				sp.edit().putString("password", password.getText().toString().trim()).commit();
+			}
 			String host="smtp."+address.substring(address.lastIndexOf("@")+1);
 			MyApplication.info.setMailServerHost(host);
 			MyApplication.info.setMailServerPort("25");
